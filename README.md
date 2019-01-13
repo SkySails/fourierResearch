@@ -25,7 +25,7 @@ This means that to get the project running correctly, you need to host it on a s
 2. Check if python is installed correctly by typing `python -V` in a command prompt, the result should return the version of python installed. 
 ### Starting the server
 1. Navigate to the directory where the project was downloaded.
-2. Start the server. The command is different depending on what version of python you're using. Replace `[port]` with an available port. 
+2. Start the server. The command is different depending on what version of python you're using. Replace `[port]` with an available port.   
 **For python3.x:** `python3 -m http.server [port]`  
 **For python2.x** `python -m SimpleHTTPServer [port]`  
 3. Open a browser and navigate to `localhost:[port]`. You should now be able to see and interact with the project.
