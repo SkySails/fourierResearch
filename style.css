@@ -1,0 +1,122 @@
+#defaultCanvas0 {
+  border: 10px solid #42b9f4;
+  box-sizing: border-box;
+  background: #2d2d2d;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  backgrou: url("https://fresheverything.ca/wp-content/uploads/2015/09/ChalkboardBackground.jpg")
+}
+
+.testClass, #slider, #tslider {
+  margin-left: 20px;
+}
+
+#slider, #tslider {
+  margin-top: 2px;
+}
+
+.testClass {
+  border: 2px solid #42b9f4;
+  margin-top: 1px;
+  border-radius: 8px;
+  padding: 10px;
+  padding-right: 0px;
+}
+
+#holder {
+  color: white;
+  float: left;
+  width: 190px;
+  margin-left: 30px;
+  
+}
+
+#tholder {
+  color: white;
+  float: left;
+  width: 90px;
+  padding-right: 7px;
+}
+
+#slider {
+  float: left;
+}
+
+#tslider {
+  float: left;
+}
+
+#button {
+  padding: 12px;
+  width: 135px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  transition: all .2s ease-in-out;
+}
+
+#button:hover {
+  transform: scale(1.1);
+  transition: all .2s ease-in-out;
+}
+
+input:focus {
+    outline:none;
+    
+}
+
+.interaction {
+  position: absolute;
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 40px;
+  font-family: "Verdana";
+  font-weight: bold;
+}
+
+.interaction input{
+  float: left;
+  position: relative;
+
+}
+
+.sliders {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #d3d3d3;
+  opacity: 0.7;
+  border-radius: 7px;
+  transition: all .5s;
+  width: 19%;
+  height: 40px;
+}
+
+.sliders:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.sliders::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  background: #42b9f4;
+  cursor: pointer;
+  opacity: 0.6;
+  border-radius: 7px;
+  transition: all .5s;
+}
+.sliders::-webkit-slider-thumb:hover {
+  background: #42b9f4;
+  cursor: pointer;
+  opacity: 1;
+  transform: scaley(1.1);
+  transition: all .2s;
+}
+.sliders::-webkit-slider-thumb:active {
+  cursor: grab;
+  transition: all .2s;
+}
