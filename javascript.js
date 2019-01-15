@@ -11,7 +11,7 @@ let wave = []
 
 let fSlider;
 
-function setup() { 
+function setup() {
   createCanvas(windowWidth,windowHeight);
   fSlider = 2
   timeAdd = 0.03
@@ -42,14 +42,14 @@ function draw() {
       y += radius * sin(n * time);
   
   
-      stroke(255, 100);
+      stroke('rgba(255, 255, 255,0.7)');
       strokeWeight(stroker);
       noFill();
       ellipse(prevx, prevy, radius * 2);
  
   
       //fill(255);
-      stroke(255);
+      stroke('#42b9f4');
       line(prevx,prevy,x,y);
       ellipse(x, y, 2);
     }
@@ -92,16 +92,16 @@ function pauser() {
   }
 }
 
-function showVal(value) {
-  fSlider = value;
+function showVal() {
+  fSlider = document.getElementById("slider").value;
   if (abortMode === "off") {
-    document.getElementById("holder").innerHTML = "Current series is: " + value;
+    document.getElementById("holder").innerHTML = "Current series is: " + document.getElementById("slider").value;
   }
 }
 
-function changeTime(value) {
-  timeAdd = Number(value);
-  document.getElementById("tholder").innerHTML = "Speed: " + round(value * 100);
+function changeTime() {
+  timeAdd = Number(document.getElementById("tslider").value);
+  document.getElementById("tholder").innerHTML = "Speed: " + round(document.getElementById("tslider").value * 100);
 }
 
 function changeStroke(value) {
@@ -132,3 +132,41 @@ window.onfocus = function() {
   document.getElementById("iconTest").href = "https://pbs.twimg.com/profile_images/1827828964/fo-logo_400x400.png"
 };
 
+document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+      pauser();
+    }
+    if(e.keyCode == 69){ // Key E pressed
+      document.getElementById("tslider").value = Number(document.getElementById("tslider").value) + 0.01;
+      console.log(document.getElementById("tslider").value);
+      changeTime()
+    }
+    if(e.keyCode == 81){ // Key Q pressed
+      document.getElementById("tslider").value = Number(document.getElementById("tslider").value) - 0.01;
+      console.log(document.getElementById("tslider").value);
+      changeTime()
+    }
+    if(e.keyCode == 65){ //Key A pressed
+      document.getElementById("slider").value = Number(document.getElementById("slider").value) - 1;
+      console.log(document.getElementById("slider").value);
+      showVal()
+    }
+    if(e.keyCode == 68){ //Key D pressed
+      document.getElementById("slider").value = Number(document.getElementById("slider").value) + 1;
+      console.log(document.getElementById("slider").value);
+      showVal()
+    }
+}
+
+function toolTip() {
+  var state = document.getElementById("instructions").className
+  console.log(state)
+  if (state === "instructionsHidden") {
+    state === "instructionsVisible";
+    console.log("TEst")
+  }
+  else {
+    document.getElementById("instructions").className === "instructionsHidden";
+    console.log("Test2")
+  }
+}
