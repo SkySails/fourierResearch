@@ -7,7 +7,6 @@
 body {
   overflow: hidden;
   margin: 0;
-  backgrou: url("https://fresheverything.ca/wp-content/uploads/2015/09/ChalkboardBackground.jpg")
 }
 
 .testClass, #slider, #tslider {
@@ -65,6 +64,30 @@ body {
 input:focus {
     outline:none;
     
+}
+
+ b, strong {
+     color: #42b9f4;
+     font-size: 25px;
+     }
+
+.instructionsVisible {
+  opacity: 1;
+}
+
+.instructionsHidden {
+  opacity: 0;
+}
+
+#instructions {
+  color: white;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 42px;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Verdana";
+  transition: all 2s;
 }
 
 .interaction {
