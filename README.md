@@ -6,6 +6,7 @@ The interface is designed to be easy-to-use, while enabling the user to change a
 * `Time progression`, equal to the speed of the animation.
 * The `thetafactor` for the equation, equal to the amount of rings generated on the rotating axis.
 * A pause button for easy analysis of the wave. Handy to visualize [Gibbs phenomenon﻿](https://en.wikipedia.org/wiki/Gibbs_phenomenon) for example.
+* **_New!_** You may now manipulate the sliders using `keyboard shortcuts`. These will be shown on-screen.
 
 ***
 ### Examples:
